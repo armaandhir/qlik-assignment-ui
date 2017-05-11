@@ -28,3 +28,6 @@ The username uses local storage of browser as this is a simple app and we do not
 * You can also delete the message once you are viewing the extra information by clicking the delete button.
 
 All the requests use Ajax for making rest calls.
+
+
+*Might be little buggy as focus was only on implementing rest endpoints.*
