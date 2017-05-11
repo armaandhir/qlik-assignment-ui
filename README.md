@@ -30,4 +30,4 @@ The username uses local storage of browser as this is a simple app and we do not
 All the requests use Ajax for making rest calls.
 
 
-*Might be little buggy as focus was only on implementing rest endpoints.*
+*Might have little glitches as focus was only on implementing rest endpoints.*
