@@ -2,6 +2,10 @@
     padding-top: 120px;
 }
 
+.navbar-btn{
+    margin-right: 10px;
+}
+
 .modal-messages-wrapper{
     overflow-y: initial !important
 }
@@ -28,7 +32,7 @@
 }
 
 .msg-box-right {
-    background-color: mediumspringgreen;
+    background-color: #CCFF90;
     display: inline-block;
     padding: 7px 7px;
     -webkit-border-radius: 6px;
@@ -53,5 +57,38 @@
 .display-time{
     display: inline-block;
     color: darkgrey;
-    font-size: 90%;
+    font-size: 80%;
+    padding-top: 4px;
+    padding-left: 15px;
 }
+
+.display-text{
+    color: black;
+}
+
+/* unvisited link */
+a:link {
+    text-decoration: none;
+    color: black;
+}
+
+/* visited link */
+a:visited {
+    text-decoration: none;
+    color: default;
+}
+
+/* mouse over link */
+a:hover {
+    text-decoration: none;
+    color: default;
+}
+
+/* selected link */
+a:active {
+    text-decoration: none;
+    color: default;
+}
+
+
+

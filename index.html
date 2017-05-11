@@ -42,19 +42,37 @@
             <ul class="nav navbar-nav navbar-right">
                 <li><button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#modal-newMessage">New Message</button></li>
                 <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                <a href="#" id="account-name" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">username<span class="caret"></span></a>
                 <ul class="dropdown-menu">
                     <li><a type="button" data-toggle="modal" data-target="#modal-messages" onclick="getMessages();">Messages</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li role="separator" class="divider"></li>
-                    <li><a href="#">Separated link</a></li>
                 </ul>
                 </li>
             </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav>
+
+    <div class="modal fade" id="modal-login" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+	            <div class="modal-header">
+	                <h4 class="modal-title">Choose a Username</h4>
+	            </div>
+	            <!--<form class="form-horizontal" action="submit" method="post" onsubmit=""> -->
+                <form class="form-horizontal">
+	                <div class="modal-body">
+	                    <br/>
+	                    <div class="form-group">
+	                        <div class="col-md-12">
+	                            <input class="form-control" placeholder="username" name="username" id="username" type="text" autofocus="" required=""/>
+	                        </div>
+	                    </div>
+	                    <button type="button" class="btn btn-success btn-block" onclick="login();">SUBMIT</button>
+	                </div>
+	            </form>    
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
     
     <div class="modal fade" id="modal-newMessage" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
@@ -63,12 +81,13 @@
 	                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 	                <h4 class="modal-title">Write a Message</h4>
 	            </div>
-	            <form class="form-horizontal" action="submit" method="post" onsubmit="sendMessage();">
+	            <!--<form class="form-horizontal" action="submit" method="post" onsubmit=""> -->
+                <form class="form-horizontal">
 	                <div class="modal-body">
 	                    <br/>
 	                    <div class="form-group">
 	                        <div class="col-md-12">
-	                            <textarea class="form-control" rows="3"></textarea>
+	                            <textarea class="form-control" id="message-textarea" rows="3"></textarea>
 	                        </div>
 	                    </div>
 	                    <br/>
@@ -76,7 +95,8 @@
 	                        <div class="col-sm-12 text-right">
 	                            <input class="btn btn-default" name="button_27" type="reset"/>
 	                            <!--<input class="btn btn-success" value="Post" onclick="codeAddress();" name="button_26" type="submit"/> -->
-	                            <input class="btn btn-success" name="button_26" type="submit"/>
+	                            <!--<input class="btn btn-success" name="button_26" type="button" value="Submit" onclick="sendMessage();"/> -->
+                                <button class="btn btn-success" onclick="sendMessage();">Submit</button>
 	                        </div>
 	                    </div>
 	                </div>
@@ -92,7 +112,7 @@
 	                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 	                <h4 class="modal-title">Messages</h4>
 	            </div>
-	            <form class="form-horizontal" action="submit" method="post" onsubmit="sendMessage();">
+	            
 	                <div class="modal-body message-box">
 	                    <br/>
 	                    <div class="messages-container" id="messages-container">
@@ -112,32 +132,17 @@
                                 </div>
                             </div>
 	                    </div>
-	                    <br/>
-	                    <div class="form-group">
-	                        <div class="col-sm-12 text-right">
-	                            <input class="btn btn-default" name="button_27" type="reset"/>
-	                            <!--<input class="btn btn-success" value="Post" onclick="codeAddress();" name="button_26" type="submit"/> -->
-	                            <input class="btn btn-success" name="button_26" type="submit"/>
-	                        </div>
-	                    </div>
+                        <div class="messages-container" id="messages-detail-container">
+                        </div>
+                        <br/>
 	                </div>
-	            </form>    
+	            
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
 
-    <div>
-        <!-- Nav tabs -->
-        <ul class="nav nav-tabs" role="tablist">
-            <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
-            <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
-        </ul>
-
-        <!-- Tab panes -->
-        <div class="tab-content">
-            <div role="tabpanel" class="tab-pane active" id="home">111</div>
-            <div role="tabpanel" class="tab-pane" id="messages">222</div>
-        </div>
+    <div class="container">
+        <h4 class="text-center">All the Web content goes here :)</h4>
     </div>
     
     
